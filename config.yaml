@@ -1,0 +1,96 @@
+    # Project definitions (do not edit)
+Task: New_Soc_Test_3
+scorer: Noah
+date: Oct28
+multianimalproject: true
+identity: false
+
+    # Project path (change when moving around)
+project_path: /mickey/jbbecker_lab/nbleonar/Documents/DLC_testruns/New_Soc_Test_3-Noah-2021-10-28
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  /mickey/jbbecker_lab/nbleonar/Documents/DLC_testruns/New_Soc_Test_3-Noah-2021-10-28/videos/F12-F14_10.22.21downsampled.mp4:
+    crop: 193, 1134, 108, 634
+  /mickey/jbbecker_lab/nbleonar/Documents/DLC_testruns/New_Soc_Test_3-Noah-2021-10-28/videos/F20-F22_10.22.21downsampled.mp4:
+    crop: 200, 1142, 64, 572
+  /mickey/jbbecker_lab/nbleonar/Documents/DLC_testruns/New_Soc_Test_3-Noah-2021-10-28/videos/M9-M11_10.22.21downsampled.mp4:
+    crop: 174, 1142, 61, 598
+individuals:
+- marked
+- nonmarked
+uniquebodyparts:
+- cage_corner_bottom_left
+- cage_corner_top_left
+- cage_corner_top_right
+- cage_corner_bottom_right
+multianimalbodyparts:
+- nose_tip
+- left_ear
+- right_ear
+- spine_1
+- spine_2
+- tail_base
+skeleton:
+- - nose_tip
+  - left_ear
+- - left_ear
+  - right_ear
+- - nose_tip
+  - tail_base
+- - right_ear
+  - tail_base
+- - nose_tip
+  - right_ear
+- - left_ear
+  - tail_base
+- - spine_1
+  - spine_2
+- - nose_tip
+  - spine_1
+- - spine_1
+  - left_ear
+- - spine_1
+  - right_ear
+- - tail_base
+  - spine_2
+- - tail_base
+  - spine_1
+- - spine_2
+  - right_ear
+- - spine_2
+  - left_ear
+bodyparts: MULTI!
+start: 0
+stop: 1
+numframes2pick: 10
+
+    # Plotting configuration
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 12
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: dlcrnet_ms5
+default_augmenter: multi-animal-imgaug
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
